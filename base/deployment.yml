@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: heimdal
+  namespace: heimdal
+  labels:
+    app: heimdal
+spec:
+  selector:
+    matchLabels:
+      app: heimdal
+  template:
+    metadata:
+      labels:
+        app: heimdal
+    spec:
+      containers:
+        - image: linuxserver/heimdall:2.4.13
+          name: heimdal
+          env:
+          - name: PGID
+            value: "1000"
+          - name: PUID
+            value: "1000"
+          - name: TZ
+            value: Europe/Vienna
+          ports:
+          - containerPort: 80
+            name: http-80
+            protocol: TCP
+          volumeMounts:
+          - mountPath: /config
+            name: heimdal-persistent-storage
+            subPath: config              
+          resources:
+            limits:
+              cpu: '150m'
+              memory: '250Mi'
+            requests:
+              cpu: '50m'
+              memory: '100Mi'
+      volumes:
+        - name: heimdal-persistent-storage
+          persistentVolumeClaim:
+            claimName: heimdal-pvc
