@@ -17,7 +17,7 @@ spec:
         app: heimdal
     spec:
       containers:
-        - image: linuxserver/heimdall:2.4.13
+        - image: linuxserver/heimdall:latest
           name: heimdal
           env:
           - name: PGID

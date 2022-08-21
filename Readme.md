@@ -19,8 +19,8 @@ there is also sample definition for the [Heimdal App](https://github.com/wep4you
 
 ## Install manual with kubectl
 
-To add your own configuration, copy ```overlays/local``` to a new folder and change th files to your needs.
-Its standard Kustomize format, in the example Ingress is patched with a new Domainname and the Deployment
+To add your own configuration, copy ```overlays/local``` to a new folder and change the files to your needs.
+It's standard Kustomize format, in the example Ingress is patched with a new Domainname and the Deployment
 is patched with another Version of the Image, instead of latest from the base file.
 
     ```
