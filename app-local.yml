@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: dev
+  project: default
   source:
     path: overlays/local
     repoURL: https://github.com/wep4you/heimdal-kustomize.git

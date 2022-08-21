@@ -8,7 +8,9 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: heimdal
+      app: heimdal      
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
