@@ -1,16 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: heimdal
-  namespace: heimdal
+  name: heimdall
+  namespace: heimdall
 spec:
   rules:
-    - host: heimdal.127.0.0.1.nip.io
+    - host: heimdall.127.0.0.1.nip.io
       http:
         paths:
           - backend:
               service:
-                name: heimdal
+                name: heimdall
                 port:
                   number: 80
             pathType: ImplementationSpecific

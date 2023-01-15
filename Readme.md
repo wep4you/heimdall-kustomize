@@ -13,9 +13,9 @@ https://github.com/linuxserver/Heimdall
 ## Install with Argo CD
 
 Use a central repository which links to all Apps which has to be deployed,
-and add the App desciption there, or deploy the App for heimdal manually.
+and add the App desciption there, or deploy the App for heimdall manually.
 Find a sample in my [App of Apps Repo](https://github.com/wep4you/k8s-apps.git),
-there is also sample definition for the [Heimdal App](https://github.com/wep4you/k8s-apps/blob/main/local/heimdal.yml)
+there is also sample definition for the [Heimdall App](https://github.com/wep4you/k8s-apps/blob/main/local/heimdall.yml)
 
 ## Install manual with kubectl
 

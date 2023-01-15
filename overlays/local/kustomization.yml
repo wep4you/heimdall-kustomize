@@ -9,10 +9,10 @@ patches:
   target:
     group: networking.k8s.io
     kind: Ingress
-    name: heimdal
-    namespace: heimdal
+    name: heimdall
+    namespace: heimdall
     version: v1
 images:
 - name: linuxserver/heimdall
   newName: linuxserver/heimdall
-  newTag: 2.5.3
+  newTag: 2.5.5

@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: heimdal
-  namespace: heimdal
+  name: heimdall
+  namespace: heimdall
   labels:
     app: heimdal
 spec:
   selector:
     matchLabels:
-      app: heimdal      
+      app: heimdall      
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: heimdal
+        app: heimdall
     spec:
       containers:
         - image: linuxserver/heimdall:latest
-          name: heimdal
+          name: heimdall
           env:
           - name: PGID
             value: "1000"
@@ -32,7 +32,7 @@ spec:
             protocol: TCP
           volumeMounts:
           - mountPath: /config
-            name: heimdal-persistent-storage
+            name: heimdall-persistent-storage
             subPath: config              
           resources:
             limits:
@@ -44,4 +44,4 @@ spec:
       volumes:
         - name: heimdal-persistent-storage
           persistentVolumeClaim:
-            claimName: heimdal-pvc
+            claimName: heimdall-pvc

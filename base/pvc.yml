@@ -1,10 +1,10 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: heimdal-pvc
-  namespace: heimdal
+  name: heimdall-pvc
+  namespace: heimdall
   labels:
-    app: heimdal
+    app: heimdall
 spec:
   accessModes:
     - ReadWriteOnce
