@@ -42,6 +42,6 @@ spec:
               cpu: '50m'
               memory: '100Mi'
       volumes:
-        - name: heimdal-persistent-storage
+        - name: heimdall-persistent-storage
           persistentVolumeClaim:
             claimName: heimdall-pvc
